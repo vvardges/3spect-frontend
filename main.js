@@ -1,91 +1,3 @@
-import { Application } from "https://cdn.skypack.dev/@splinetool/runtime@0.9.416";
-
-const canvas = document.getElementById("canvas3d");
-const app = new Application(canvas);
-app
-    .load("https://prod.spline.design/ZZOWNi4tS7p8xxOs/scene.splinecode")
-    .then(() => {
-        const keyboard = app.findObjectByName("keyboard");
-
-        gsap.set(keyboard.scale, { x: 0.5, y: 0.5, z: 0.5 });
-        gsap.set(keyboard.position, { x: 250, y: 50 });
-
-        let rotateKeyboard = gsap.to(keyboard.rotation, {
-            y: Math.PI * 2 + keyboard.rotation.y,
-            x: 0,
-            z: 0,
-            duration: 10,
-            repeat: -1,
-            ease: "none"
-        });
-
-        let rotationProgress = 0;
-        let interval;
-
-        gsap
-            .timeline({
-                scrollTrigger: {
-                    trigger: "#part1",
-                    start: "top 60%",
-                    end: "bottom bottom",
-                    scrub: true,
-                    onEnter: () => {
-                        rotationProgress = rotateKeyboard.progress();
-
-                        interval = setInterval(() => {
-                            app.emitEvent("keyDown", "keyboard");
-                        }, 1500);
-
-                        rotateKeyboard.pause();
-                        gsap.to(keyboard.rotation, {
-                            y: Math.PI / 12,
-                            duration: 1
-                        });
-                    },
-                    onLeaveBack: () => {
-                        const newProgress = keyboard.rotation.y / (Math.PI * 2);
-                        rotateKeyboard.progress(newProgress).resume();
-                        clearInterval(interval);
-                    }
-                }
-            })
-            .to(keyboard.rotation, { x: -Math.PI / 14, z: Math.PI / 36 }, 0)
-            .to(keyboard.position, { x: -500, y: -200 }, 0)
-            .to(keyboard.scale, { x: 3, y: 3, z: 3 }, 0);
-
-        gsap
-            .timeline({
-                onComplete: () => {
-                    clearInterval(interval);
-                    app.emitEvent("mouseDown", "keyboard");
-                },
-                scrollTrigger: {
-                    trigger: "#part2",
-                    start: "top bottom",
-                    end: "center bottom",
-                    scrub: true
-                }
-            })
-            .to(keyboard.rotation, { x: Math.PI / 36, y: -Math.PI / 10 }, 0)
-            .to(keyboard.position, { x: 150, y: 50 }, 0)
-            .to(keyboard.scale, { x: 0.5, y: 0.5, z: 0.5 }, 0);
-
-        gsap
-            .timeline({
-                scrollTrigger: {
-                    trigger: "#part3",
-                    start: "top bottom",
-                    end: "bottom bottom",
-                    scrub: true
-                }
-            })
-            .to(keyboard.position, { x: 0, y: 100 }, 0);
-    });
-
-
-
-// background progress bar
-
 function animateBar(triggerElement, onEnterWidth, onLeaveBackWidth) {
     gsap.to(".bar", {
         scrollTrigger: {
@@ -111,9 +23,10 @@ function animateBar(triggerElement, onEnterWidth, onLeaveBackWidth) {
     });
 }
 
-animateBar("#part1", "35%", "0%");
-animateBar("#part2", "65%", "35%");
-animateBar("#part3", "100%", "65%");
+animateBar("#hero", "25%", "0%");
+animateBar("#part1", "50%", "25%");
+animateBar("#part2", "75%", "50%");
+animateBar("#part3", "100%", "75%");
 
 
 
