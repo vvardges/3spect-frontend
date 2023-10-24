@@ -6,17 +6,17 @@ function animateBar(triggerElement, onEnterWidth, onLeaveBackWidth) {
             end: "bottom bottom",
             scrub: true,
             onEnter: () => {
-                gsap.to(".bar", {
-                    width: onEnterWidth,
-                    duration: 0.2,
-                    ease: "none"
+                gsap.to('.bar', {
+                  width: onEnterWidth,
+                  duration: 3,
+                  ease: 'slow',
                 });
             },
             onLeaveBack: () => {
-                gsap.to(".bar", {
-                    width: onLeaveBackWidth,
-                    duration: 0.2,
-                    ease: "none"
+                gsap.to('.bar', {
+                  width: onLeaveBackWidth,
+                  duration: 3,
+                  ease: 'slow',
                 });
             }
         }
