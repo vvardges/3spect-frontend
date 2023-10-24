@@ -63,8 +63,9 @@ p {
 
 #hero-gif {
     position: absolute;
-    right: -10%;
-    width: 60%;
+    top: 80px;
+    right: 40px;
+    width: 35%;
 }
 
 #hero-gif img {
