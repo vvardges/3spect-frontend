@@ -1,6 +1,5 @@
 body {
     background-color: black;
-
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -14,6 +13,47 @@ body {
 
 * {
     font-family: "Bricolage Grotesque", sans-serif;
+    color: white;
+}
+
+nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -5px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 1;
+}
+
+p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+button {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 200;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 1px solid white;
 }
 
 .flex {
@@ -32,25 +72,6 @@ body {
     justify-content: center;
 }
 
-#canvas3d {
-    width: 100%;
-    height: 100%;
-}
-
-nav {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-p {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 200;
-    color: white;
-}
-
 .bar {
     height: 100%;
     width: 0;
@@ -59,98 +80,6 @@ p {
     top: 0;
     background-image: url('./assets/background.gif');
     z-index: -5;
-}
-
-#hero-gif {
-    position: absolute;
-    top: 80px;
-    right: 40px;
-    width: 35%;
-}
-
-#hero-gif img {
-    max-width: 100%;
-}
-
-h1 {
-    font-size: 10vw;
-    position: absolute;
-    top: 0;
-    font-weight: 800;
-    left: 160px;
-    line-height: 1;
-    letter-spacing: -5px;
-    color: white;
-}
-
-h2 {
-    font-size: 40px;
-    line-height: 1;
-    color: white;
-}
-
-#hero {
-    height: 100vh;
-}
-
-#part1 {
-    width: 100%;
-    height: 150vh;
-}
-
-.part1-info,
-.part2-info {
-    width: 30%;
-    gap: 40px;
-    padding: 1%;
-}
-
-.part2-social {
-    width: 60%;
-    gap: 40px;
-}
-
-.part1-video {
-    margin: 0 auto;
-}
-
-button {
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background-color: transparent;
-    font-size: 18px;
-    font-weight: 200;
-    width: 100%;
-    border-radius: 10px;
-    padding: 20px 0;
-    cursor: pointer;
-    color: white;
-}
-
-button:hover {
-    border: 1px solid white;
-}
-
-#part2 {
-    height: 150vh;
-    width: 100%;
-    align-items: center;
-    gap: 2rem;
-}
-
-#part2 h2 {
-    margin-bottom: 0
-}
-
-#part3 {
-    height: 60vh;
-    justify-content: space-between;
-    align-items: center !important;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-a {
-    color: white;
 }
 
 .scroll-icon {
@@ -175,6 +104,93 @@ a {
     transition: transform 0.2s;
 }
 
+.centered {
+    text-align: center;
+}
+
+#gif {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    width: 35%;
+}
+
+#gif img {
+    max-width: 100%;
+    filter: grayscale(1) contrast(150%);
+}
+
+#hero {
+    height: 80vh;
+    text-transform: lowercase;
+}
+
+#hero h1 {
+    font-size: 10vw;
+    position: absolute;
+    top: 0;
+    font-weight: 800;
+    left: 160px;
+    line-height: 1;
+    letter-spacing: -5px;
+    color: white;
+}
+
+#story h1 {
+
+}
+
+#video {
+    width: 100%;
+    height: 150vh;
+}
+
+.video-block {
+    margin: 0 auto;
+}
+
+.video-info{
+    width: 30%;
+    gap: 40px;
+    padding: 1%;
+}
+
+#social {
+    height: 150vh;
+    width: 100%;
+    align-items: center;
+    gap: 2rem;
+}
+
+#social h2 {
+    margin-bottom: 0
+}
+
+.social-icons {
+    width: 60%;
+    gap: 40px;
+}
+
+#team {
+    height: 60vh;
+    justify-content: space-between;
+    align-items: center !important;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#team .member {
+    max-width: 300px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+#team .member img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
 @keyframes pressDown {
     0%,
     100% {
@@ -186,36 +202,17 @@ a {
 }
 
 @media screen and (max-width: 1000px) {
-    .canvas-cont {
-        width: 200vw;
-        transform: scale(0.5);
-        left: auto;
-        top: 25vh;
-    }
-
     h1 {
         top: 20vw;
         font-size: 15vw;
     }
 
-    .part1-info,
-    .part2-info, .part2-social {
+    .video-info,
+    .social-icons {
         width: 100%;
     }
 
     h2 {
         font-size: 5vw;
     }
-}
-
-.team-member {
-    max-width: 300px;
-    text-align: center;
-    margin: 0 10px;
-}
-
-.team-member img {
-    width: 200px;
-    border-radius: 50%;
-    margin-bottom: 15px;
 }
