@@ -8,21 +8,16 @@
     <title>3spect - The future of online shopping</title>
     <link rel="icon" type="image/png" href="./assets/logo.png" />
     <link rel="stylesheet" href="./style.css">
-    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
-    <script src="./main.js" type="module"></script>
 </head>
 <body>
-    <nav class="flex row">
+    <nav class="flex">
         <img src="./assets/logo.png" width="100" alt="">
     </nav>
 
-    <div class="bar"></div>
-    
-    <div id="hero" class="flex row">
-        <h1>The future <br>of online <br>
-            <span class="keyboard">
+    <div class="content">
+        <div id="hero" class="flex auto">
+            <h1>The future <br>of online <br>
+                <span class="keyboard">
                 <span class="key">s</span>
                 <span class="key">h</span>
                 <span class="key">o</span>
@@ -33,59 +28,63 @@
                 <span class="key">g</span>
                 .
             </span>
-        </h1>
-        <picture id="gif">
-            <source srcset="./assets/ar-hero.gif"> <img src="./assets/ar-hero.gif">
-        </picture>
+            </h1>
+            <img src="./assets/ar-hero.gif" id="gif">
         </div>
+
         <div id="story" class="flex column">
             <h1>story</h1>
-            <h2>Ever ordered a piece of clothing, imagined how nice it would fit you and then been disappointed after receiving
-                it and trying it on?<h2>
-                    <h2 class="centered">We feel you and we have a solution for you!</h2>
+            <h2>Ever ordered a piece of clothing, imagined how nice it would fit you and then been disappointed after receiving it and trying it on?</h2>
+            <h2>We feel you and we have a solution for you!</h2>
         </div>
-        
-        <div id="video" class="flex row">
+
+        <div id="video" class="flex auto">
             <div class="video-block">
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/mZcLKcyHWDs?si=TuIGvya-TtP_I1GX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div class="video-info flex column">
-            <h2 class="centered">check out the video demonstrating our app's alpha version prototype</h2>
-        </div>
-    </div>
-
-    <div id="social" class="flex column">
-        <h2>KEEP IN TOUCH WITH US.</h2>
-        <p>It's all yours! Change the colors as you like. Make them purple, green, red, anything.</p>
-
-        <div class="social-icons flex row">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-8 h-8"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-8 h-8"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-8 h-8"><path d="M11.99432,2a10,10,0,1,0,10,10A9.99917,9.99917,0,0,0,11.99432,2Zm3.17951,15.15247a.70547.70547,0,0,1-1.002.3515l-2.71467-2.10938L9.71484,17.002a.29969.29969,0,0,1-.285.03894l.334-2.98846.01069.00848.00683-.059s4.885-4.44751,5.084-4.637c.20147-.189.135-.23.135-.23.01147-.23053-.36152,0-.36152,0L8.16632,13.299l-2.69549-.918s-.414-.1485-.453-.475c-.041-.324.46649-.5.46649-.5l10.717-4.25751s.881-.39252.881.25751Z"></path></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="-2 -2 20 20" class="w-8 h-8"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"></path></svg>
-        </div>
-    </div>
-
-    <div id="team" class="flex column">
-        <div class="flex row">
-            <div class="member">
-                <img src="./assets/team-member-1.png" alt="">
-                <p><b>Khachatur Tovmasyan</b><br><small>Lead Software Engineer, Resource Manager at EPAM Systems Spain</small></p>
+                <iframe height="450" src="https://www.youtube.com/embed/mZcLKcyHWDs?si=TuIGvya-TtP_I1GX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div class="member">
-                <img src="./assets/team-member-2.png" alt="">
-                <p><b>Tigran Voskanyan</b><br><small>Expert in StartUp - Idea Validation to Implementation</small></p>
-            </div>
-            <div class="member">
-                <img src="./assets/team-member-3.png" alt="">
-                <p><b>Vardges Vardanyan</b><br><small>Lead Software Engineer at Invia, Co-Founder at Heroco</small></p>
+            <div class="video-info flex column">
+                <h2 class="centered">check out the video demonstrating our app's alpha version prototype</h2>
             </div>
         </div>
-        <div>
+
+        <div id="team">
+            <h2>THE TEAM</h2>
+            <div class="flex auto gap justify-center">
+                <a class="member" href="https://www.linkedin.com/in/tovmassian/" target="_blank">
+                    <img src="./assets/team-member-1.png" alt="">
+                    <p><b>Khachatur Tovmasyan, Ph.D.</b><br><small>Lead Software Engineer, Resource Manager at EPAM Systems Spain</small></p>
+                </a>
+                <a class="member" href="https://www.linkedin.com/in/mariasahakyan/" target="_blank">
+                    <img src="./assets/team-member-4.png" alt="">
+                    <p><b>Maria Sahakyan, Ph.D.</b><br><small>Postdoctoral Associate at New York University Abu Dhabi</small></p>
+                </a>
+                <a class="member" href="https://www.linkedin.com/in/tigran-voskanyan87/" target="_blank">
+                    <img src="./assets/team-member-2.png" alt="">
+                    <p><b>Tigran Voskanyan</b><br><small>Expert in StartUp - Idea Validation to Implementation</small></p>
+                </a>
+                <a class="member" href="https://www.linkedin.com/in/vardges-vardanyan/" target="_blank">
+                    <img src="./assets/team-member-3.png" alt="">
+                    <p><b>Vardges Vardanyan</b><br><small>Lead Software Engineer at Invia, Co-Founder at Heroco</small></p>
+                </a>
+            </div>
+        </div>
+
+        <div id="social" class="flex column">
+            <h2>KEEP IN TOUCH WITH US.</h2>
+            <p>It's all yours! Change the colors as you like. Make them purple, green, red, anything.</p>
+
+            <div class="social-icons flex row justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-8 h-8"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-8 h-8"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-8 h-8"><path d="M11.99432,2a10,10,0,1,0,10,10A9.99917,9.99917,0,0,0,11.99432,2Zm3.17951,15.15247a.70547.70547,0,0,1-1.002.3515l-2.71467-2.10938L9.71484,17.002a.29969.29969,0,0,1-.285.03894l.334-2.98846.01069.00848.00683-.059s4.885-4.44751,5.084-4.637c.20147-.189.135-.23.135-.23.01147-.23053-.36152,0-.36152,0L8.16632,13.299l-2.69549-.918s-.414-.1485-.453-.475c-.041-.324.46649-.5.46649-.5l10.717-4.25751s.881-.39252.881.25751Z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="-2 -2 20 20" class="w-8 h-8"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"></path></svg>
+            </div>
+        </div>
+
+        <div id="footer">
             <h2>#RealToVirtual3DConversion</h2>
             <p>© 2023 3spect. All Rights Reserved.</p>
         </div>
-
     </div>
 
 </body>
